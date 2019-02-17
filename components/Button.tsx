@@ -15,32 +15,37 @@ interface IButtonProps {
   onPress?: (ev: NativeSyntheticEvent<NativeTouchEvent>) => void;
 }
 
-export const Button: React.SFC<IButtonProps> = ({
-  title = "Submit",
-  primary = false,
-  loading = false,
-  onPress = () => null,
-  ...otherProps
-}) => (
-  <TouchableOpacity
-    onPress={onPress}
-    style={[ButtonStyle.btnClass, primary ? ButtonStyle.btnBtnpriClass : null]}
-    {...otherProps}
-  >
-    <Text
+export const Button: React.SFC<IButtonProps> = React.memo(
+  ({
+    title = "Submit",
+    primary = false,
+    loading = false,
+    onPress = () => null,
+    ...otherProps
+  }) => (
+    <TouchableOpacity
+      onPress={onPress}
       style={[
-        ButtonStyle.BText,
-        primary ? ButtonStyle.BtextPri : null,
-        loading ? { lineHeight: 45 } : null
+        ButtonStyle.btnClass,
+        primary ? ButtonStyle.btnBtnpriClass : null
       ]}
+      {...otherProps}
     >
-      {loading ? (
-        <ActivityIndicator color={primary ? "#fff" : "#555"} />
-      ) : (
-        title
-      )}
-    </Text>
-  </TouchableOpacity>
+      <Text
+        style={[
+          ButtonStyle.BText,
+          primary ? ButtonStyle.BtextPri : null,
+          loading ? { lineHeight: 45 } : null
+        ]}
+      >
+        {loading ? (
+          <ActivityIndicator color={primary ? "#fff" : "#555"} />
+        ) : (
+          title
+        )}
+      </Text>
+    </TouchableOpacity>
+  )
 );
 
 Button.defaultProps = {

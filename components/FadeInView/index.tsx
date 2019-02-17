@@ -5,7 +5,7 @@ interface IAppProps {
   style?: any;
 }
 
-const FadeInView: React.FunctionComponent<IAppProps> = props => {
+const FadeInView: React.FunctionComponent<IAppProps> = React.memo(props => {
   const [fadeAnim, setfadeAnim] = useState(new Animated.Value(0));
 
   useEffect(() => {
@@ -29,6 +29,6 @@ const FadeInView: React.FunctionComponent<IAppProps> = props => {
       {props.children}
     </Animated.View>
   );
-};
+});
 
 export { FadeInView };
