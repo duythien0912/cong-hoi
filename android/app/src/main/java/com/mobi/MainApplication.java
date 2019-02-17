@@ -3,6 +3,12 @@ package com.mobi;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.airbnb.android.react.maps.MapsPackage;
+import com.airbnb.android.react.lottie.LottiePackage;
+import com.BV.LinearGradient.LinearGradientPackage;
+import im.shimo.react.cookie.CookieManagerPackage;
+import com.psykar.cookiemanager.CookieManagerPackage;
+import com.reactnativecommunity.webview.RNCWebViewPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.facebook.react.ReactNativeHost;
@@ -25,6 +31,12 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new MapsPackage(),
+            new LottiePackage(),
+            new LinearGradientPackage(),
+            new CookieManagerPackage(),
+            new CookieManagerPackage(),
+            new RNCWebViewPackage(),
             new VectorIconsPackage(),
             new RNGestureHandlerPackage()
       );

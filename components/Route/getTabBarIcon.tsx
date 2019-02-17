@@ -24,6 +24,11 @@ export const getTabBarIcon = (
   } else if (routeName === "Home2") {
     // iconName = `ios-home${focused ? "" : "-outline"}`;
     iconName = `ios-rocket`;
+  } else if (routeName === "User") {
+    // iconName = `ios-home${focused ? "" : "-outline"}`;
+    iconName = `logo-instagram`;
+  } else if (routeName === "Map") {
+    iconName = `md-map`;
   }
   // You can return any component that you like here!
   return <IconComponent name={iconName} size={25} color={tintColor} />;

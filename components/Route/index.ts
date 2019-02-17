@@ -7,13 +7,17 @@ import {
 import { HomeScreen } from "../Screens/HomeScreen";
 import { DetailsScreen } from "../Screens/DetailsScreen";
 import { getTabBarIcon } from "./getTabBarIcon";
+import LoginScreen from "../Screens/LoginScreen";
+import MapScreen from "../Screens/MapScreen";
 
 const RootStack = createBottomTabNavigator(
   {
     Home: HomeScreen,
     Home1: HomeScreen,
     Home2: HomeScreen,
-    Details: DetailsScreen
+    Details: DetailsScreen,
+    User: LoginScreen,
+    Map: MapScreen
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
