@@ -1,8 +1,9 @@
 import React from "react";
 import { View, Text, Button } from "react-native";
+import { NavigationScreenProp } from "react-navigation";
 
 interface DetailsScreenProps {
-  navigation: any;
+  navigation: NavigationScreenProp<any, any>;
 }
 
 const DetailsScreen: React.SFC<DetailsScreenProps> = React.memo(props => {
