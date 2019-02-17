@@ -20,10 +20,10 @@ export const getTabBarIcon = (
     iconName = `ios-settings`;
   } else if (routeName === "Home1") {
     // iconName = `ios-home${focused ? "" : "-outline"}`;
-    iconName = `ios-home`;
+    iconName = `ios-heart`;
   } else if (routeName === "Home2") {
     // iconName = `ios-home${focused ? "" : "-outline"}`;
-    iconName = `ios-home`;
+    iconName = `ios-rocket`;
   }
   // You can return any component that you like here!
   return <IconComponent name={iconName} size={25} color={tintColor} />;

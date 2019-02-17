@@ -27,7 +27,10 @@ const HomeScreen: React.SFC<HomeScreenProps> = React.memo(props => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView contentContainerStyle={styles.containerScrollView}>
+      <ScrollView
+        contentContainerStyle={styles.containerScrollView}
+        // bounces={false}
+      >
         <Text>Home Screen</Text>
         <Button
           title="Go to Details"
