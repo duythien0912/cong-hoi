@@ -1,5 +1,5 @@
 {
-  "name": "conghoi",
+  "name": "@conghoi/app",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "react": "^16.8.2",
-    "react-native": "^0.59.0-rc.1"
+    "react-native": "^0.59.0-rc.1",
+    "@conghoi/common": "1.0.0"
   },
   "devDependencies": {
     "@types/jest": "24.0.5",
@@ -27,5 +28,13 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "workspaces": {
+    "nohoist": [
+      "react-native",
+      "react-native/**",
+      "react",
+      "react/**"
+    ]
   }
 }
